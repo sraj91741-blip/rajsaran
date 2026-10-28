@@ -1,0 +1,309 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Website</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff0f3;
+            padding: 30px;
+        }
+
+        /* Main container */
+        .container {
+            max-width: 1100px;
+            min-height: 360px;
+            margin: auto;
+            padding: 25px 35px;
+            background: #3b1035;
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px #00000025;
+        }
+
+        /* Navigation bar */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 22px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #9ed9f5;
+        }
+
+        /* Hero section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            min-height: 290px;
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .hero-content h3 {
+            color: #ffb02e;
+            font-family: cursive;
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .hero-content h1 {
+            font-size: 28px;
+            line-height: 1.4;
+            margin-bottom: 12px;
+        }
+
+        .hero-content p {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #f0dfe2;
+            margin-bottom: 22px;
+        }
+
+        /* Buttons */
+        .buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        .order-btn {
+            background: #ff24b6;
+            color: #103510;
+            border: 1px solid #ff2424;
+        }
+
+        .order-btn:hover {
+            background: #ffffff;
+        }
+
+        .contact-btn {
+            color: white;
+            border: 1px solid white;
+        }
+
+        .contact-btn:hover {
+            background: white;
+            color: #3b101a;
+        }
+
+        /* Coffee image */
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 380px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        /* Other sections */
+        .section {
+            text-align: center;
+            padding: 45px 20px;
+            margin-top: 25px;
+            background: white;
+            border-radius: 10px;
+        }
+
+        .section h2 {
+            color: #32103b;
+            margin-bottom: 15px;
+        }
+
+        .section p {
+            color: #132d5e;
+            line-height: 1.7;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #14b398;
+            font-size: 13px;
+        }
+
+        /* Mobile responsive design */
+        @media (max-width: 650px) {
+            body {
+                padding: 15px;
+            }
+
+            .container {
+                padding: 22px;
+            }
+
+            header {
+                flex-direction: column;
+            }
+
+            nav {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 45px;
+            }
+
+            .hero-content h1 {
+                font-size: 25px;
+            }
+
+            .buttons {
+                justify-content: center;
+            }
+
+            .hero-image img {
+                max-width: 280px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Navigation -->
+        <header>
+            <div class="logo">☕ Coffee</div>
+
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#menu">Menu</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <!-- Home section -->
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+                <h3>Best Coffee</h3>
+
+                <h1>
+                    Make your day great with our
+                    special coffee!
+                </h1>
+
+                <p>
+                    Welcome to our coffee paradise where every bean
+                    tells a story and every cup sparks joy.
+                </p>
+
+                <div class="buttons">
+                    <a href="#menu" class="btn order-btn">
+                        Order Now
+                    </a>
+
+                    <a href="#contact" class="btn contact-btn">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <img
+                    src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=700&q=85"
+                    alt="A cup of freshly brewed coffee">
+            </div>
+
+        </section>
+    </div>
+
+    <!-- About section -->
+    <section class="section" id="about">
+        <h2>About Our Coffee</h2>
+        <p>
+            We serve freshly brewed coffee made with love.
+            Enjoy every sip of your favorite coffee.
+        </p>
+    </section>
+
+    <!-- Menu section -->
+    <section class="section" id="menu">
+        <h2>Our Coffee Menu</h2>
+        <p>Espresso | Cappuccino | Latte | Cold Coffee</p>
+    </section>
+
+    <!-- Testimonials section -->
+    <section class="section" id="testimonials">
+        <h2>Testimonials</h2>
+        <p>Every cup brings a smile. Thank you for choosing us!</p>
+    </section>
+
+    <!-- Gallery section -->
+    <section class="section" id="gallery">
+        <h2>Our Gallery</h2>
+        <p>Discover the beauty of coffee and the joy of every cup.</p>
+    </section>
+
+    <!-- Contact section -->
+    <section class="section" id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: coffee@scoopy.com</p>
+        <p>Phone: +91 98765 43210</p>
+    </section>
+
+    <footer>
+        <p>© 2026 Coffee Website. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
